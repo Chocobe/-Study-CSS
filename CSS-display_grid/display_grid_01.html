@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display: grid (01)</title>
+
+  <!-- 초기화 -->
+  <style type="text/css">
+    #container div { text-align: center; }
+    #container div:nth-child(1) { background-color: mediumseagreen; }
+    #container div:nth-child(2) { background-color: goldenrod; }
+    #container div:nth-child(3) { background-color: mediumslateblue; }
+    #container div:nth-child(4) { background-color: darkolivegreen; }
+    #container div:nth-child(5) { background-color: crimson; }
+    #container div:nth-child(6) { background-color: skyblue; }
+  </style>
+
+  <!-- 실습 -->
+  <style type="text/css">
+    #container {
+      display: grid;
+      grid-template-columns: 100px auto 100px;
+      grid-template-rows: 50px 100px;
+      grid-gap: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>(CSS) display:grid 1강</h1>
+  <p>인강주소: https://www.youtube.com/watch?v=U0FJBHCWt3k&list=PL-qMANrofLyvQ6FuaIe3YRRX82eISDy11&index=12</p>
+
+  <div id="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+</body>
+</html>
