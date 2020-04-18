@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03_display_grid_rowLine_columnLine_과제</title>
+
+  <!-- 초기화 -->
+  <style type="text/css">
+    #container {
+      width: 500px;
+      height: 500px;
+      
+      margin: 0 auto;
+      
+      display: grid;
+      grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+      grid-gap: 10px;
+    }
+
+    #container > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 2.5em;
+      font-weight: bolder;
+      color: #555;
+
+      border: 3px solid #999;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .font-small {
+      font-size: 0.3em;
+    }
+
+    #container > div.font-blue {
+      color: deepskyblue;
+    }
+
+    #container > div.font-peru {
+      color: peru;
+    }
+  </style>
+
+  <!-- grid -->
+  <style type="text/css">
+    #container div:nth-child(7) {
+      grid-column: 2 / span 3;
+      grid-row: 2 / span 2;
+
+      display: flex;
+      flex-flow: column wrap;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>03_display_grid_rowLine_columnLine_과제</h1>
+  <div id="container">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+
+    <div>6</div>
+    <div>
+      7
+      <div class="font-small">
+        grid-column: span 3
+        <br/>
+        grid-row: span 2
+      </div>
+    </div>
+    <div class="font-blue">8</div>
+    <div class="font-blue">9</div>
+    <div class="font-blue">10</div>
+
+    <div class="font-blue">11</div>
+    <div class="font-blue">12</div>
+    <div class="font-blue">13</div>
+    <div class="font-blue">14</div>
+    <div class="font-blue">15</div>
+    
+    <div class="font-peru">16</div>
+    <div class="font-peru">17</div>
+    <div class="font-peru">18</div>
+    <div class="font-peru">19</div>
+    <div class="font-peru">20</div>
+  </div>
+</body>
+</html>

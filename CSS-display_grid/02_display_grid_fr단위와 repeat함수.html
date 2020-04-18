@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display: grid (02)</title>
+
+  <!-- 초기화 -->
+  <style type="text/css">
+    div div { text-align: center; }
+    div div:nth-child(1) { background-color: mediumseagreen; }
+    div div:nth-child(2) { background-color: goldenrod; }
+    div div:nth-child(3) { background-color: mediumslateblue; }
+    div div:nth-child(4) { background-color: darkolivegreen; }
+    div div:nth-child(5) { background-color: crimson; }
+    div div:nth-child(6) { background-color: skyblue; }
+  </style>
+
+  <!-- 실습_1: (Fraction) fr단위, repeat()함수 -->
+  <style type="text/css">
+    #container_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 100px;
+    }
+
+    #container_2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2,100px);
+    }
+
+    #container_3 {
+      display: grid;
+      grid-template: repeat(2, 100px) / repeat(3, 1fr);
+    }
+  </style>
+</head>
+
+<body>
+  <h1>(CSS) display:grid 2강</h1>
+  <p>인강주소: https://www.youtube.com/watch?v=U0FJBHCWt3k&list=PL-qMANrofLyvQ6FuaIe3YRRX82eISDy11&index=12</p>
+
+  <h1>실습_1</h1>
+  <div id="container_1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>    
+
+  <br/><hr/><br/>
+  
+  <div id="container_2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>  
+
+  <br/><hr/><br/>
+  
+  <div id="container_3">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div> 
+</body>
+</html>
