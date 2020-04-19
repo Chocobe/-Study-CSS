@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display: grid (03)</title>
+
+  <!-- 실습_1 -->
+  <style type="text/css">
+    div.container_1 {
+      display: grid;
+
+      /* repeat(반복개수, 크기) */
+      /* auto-fit 자동 개수 지정 */
+      /* minmax(최소값, 최대값) */
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+      /* 높이 자동 설정 */
+      grid-auto-rows: 100px;
+      grid-gap: 3px;
+    }
+
+    div.container_1 > div:nth-child(1) { background-color: brown; }
+    div.container_1 > div:nth-child(2) { background-color: cadetblue; }
+    div.container_1 > div:nth-child(3) { background-color: cornflowerblue; }
+    div.container_1 > div:nth-child(4) { background-color: darkgreen; }
+    div.container_1 > div:nth-child(5) { background-color: darkorange; }
+    div.container_1 > div:nth-child(6) { background-color: darkorchid; }
+    div.container_1 > div:nth-child(7) { background-color: greenyellow; }
+    div.container_1 > div:nth-child(8) { background-color: lightpink; }
+    div.container_1 > div:nth-child(9) { background-color: orangered; }
+    div.container_1 > div:nth-child(10) { background-color: powderblue; }
+    div.container_1 > div:nth-child(11) { background-color: silver; }
+    div.container_1 > div:nth-child(12) { background-color: springgreen; }
+
+    div.container_1 > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 2em;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+<body>
+  <h1>(CSS) display:grid 3강</h1>
+  <p>인강주소: https://www.youtube.com/watch?v=Pk87sPNas5c&list=PL-qMANrofLyvQ6FuaIe3YRRX82eISDy11&index=10</p>
+
+  <h1>auto-fit, repeat()</h1>
+  <div class="container_1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </div>
+</body>
+</html>
